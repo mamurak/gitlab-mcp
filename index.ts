@@ -545,38 +545,11 @@ const toJSONSchema = (schema: z.ZodTypeAny) => zodToJsonSchema(schema, { $refStr
 // Define all available tools
 const allTools = [
   {
-    name: "search_repositories",
-    description: "Search for GitLab projects",
-    inputSchema: toJSONSchema(SearchRepositoriesSchema),
-  },
-  {
-    name: "get_merge_request",
-    description:
-      "Get details of a merge request (Either mergeRequestIid or branchName must be provided)",
-    inputSchema: toJSONSchema(GetMergeRequestSchema),
-  },
-  {
     name: "get_merge_request_diffs",
     description:
       "Get the changes/diffs of a merge request (Either mergeRequestIid or branchName must be provided)",
     inputSchema: toJSONSchema(GetMergeRequestDiffsSchema),
-  },
-  {
-    name: "list_merge_request_diffs",
-    description:
-      "List merge request diffs with pagination support (Either mergeRequestIid or branchName must be provided)",
-    inputSchema: toJSONSchema(ListMergeRequestDiffsSchema),
-  },
-  {
-    name: "list_projects",
-    description: "List projects accessible by the current user",
-    inputSchema: toJSONSchema(ListProjectsSchema),
-  },
-  {
-    name: "list_merge_requests",
-    description: "List merge requests in a GitLab project with filtering options",
-    inputSchema: toJSONSchema(ListMergeRequestsSchema),
-  },
+  }
 ];
 
 // Define which tools are read-only
